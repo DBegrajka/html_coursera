@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script>
+      function check(a,b) {
+        if(b!=0) return true;
+        else return false;
+      }
+      function mydivide(fn,num,div) {
+        if(fn(num,div))
+        {
+          alert("It's OK");
+          return num/div;
+        }
+        else alert("Not Ok");
+      }
+      result = mydivide(check,44,1);
+      function counter() {
+        var count =0;
+        return function(){
+          count++;
+          alert(count);
+        }
+      }
+      var count = counter();
+      count();
+      count();
+      count();
+    </script>
+  </head>
+</html>

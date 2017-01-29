@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title="THE AWESOME COLOR GUESSING GAME"></title>
+    <meta name= "author" content = "Deepak Begrajka" >
+      </head>
+
+      <body onload="do_game()">
+          <script>
+              var color = ['Aqua', 'Black', 'Blue', 'Brown', 'Chocolate', 'Cyan', 'Green', 'Orange', 'Pink', 'Red', 'Yellow'];
+              var target;
+              var guess_input;
+              var finished = false;
+              var guesses = 0;
+
+              function do_game() {
+                var random_number = Math.random() * 11 ;
+                var random_number_integer = Math.floor(random_number);
+                target = color[random_number_integer];
+                alert("random color genrated is " + target);
+                console.log("random color generated is\n\n" + target);
+
+                while (!finished) {
+                  guess_input = prompt("I am thinking of one of these Colors\n\n" +
+                                            color.join(" , ") + "\n\n What color I am thinking of?");
+
+                  console.log("color selected is\n\n" + guess_input);
+                  guesses+=1;
+                  finished=check_guess();
+                }
+              }
+                function check_guess() {
+                  var flag = 0;
+                  for (var i = 0; i < color.length; i++) {
+                      if(color[i] == guess_input)
+                      {
+                        flag =1;
+                        break;
+                  }
+              }
+
+              if(flag == 0) {
+                alert("sorry, I don't recognize that color!\n\n" + "Please try again");
+                return false;
+              }
+                if(flag==1)
+                {
+                if(guess_input>target){
+                      alert("Sorry, Your guess is not Correct!\n\n" +"Your input is alphabetically higher than mine!\n\n"+ "Please, Try Again!");
+                    return false;
+                }
+              if(guess_input<target){
+                  alert("Sorry, Your guess is not Correct!\n\n" +"Your input is alphabetically lower than mine!\n\n" + "Please, Try Again!");
+                  return false;
+              }
+             if(guess_input==target){
+                alert("Congratulations You have guessed the color!"  + "\n\n" + "It took you" + guesses+ "guesses to finish the game! \n\n"
+                      + "You can see the color in background");
+                      myBody=document.getElementsByTagName("body")[0];
+                      myBody.style.background=guess_input;
+                return true;
+            }
+          }
+        }
+          </script>
+      </body>
+    </html>

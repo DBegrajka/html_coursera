@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <title>My first JS page</title>
+      	<meta name = "author" content = "Deepak Begrajka">
+        <script>
+
+        /*
+          function check_users_age(age) {
+          if(age < 18)
+          alert("please go to another page");
+        }
+          function age_of_user() {
+            var age_text, age;
+            age_text = prompt("what is your age?");
+            age = parseInt(age_text);
+            return age;
+          }
+         function greet_the_user() {
+            alert("Hello!");
+            alert("We start Soon!");
+            prompt('Excited?');
+          }
+          function purchase(cats) {
+            document.write(cats);
+          }
+          function add(x,y) {
+            var z= x+y;
+            return z;
+          }*/
+        </script>
+    </head>
+    <body onload>
+      <script>
+/*      var result =  age_of_user();
+      check_users_age(result);
+      purchase(10);
+      var result = add(1,2);
+      document.write(result);
+*/
+                alert("It's my" + build_great(5) + "grandmother!");
+                function build_great(depth) {
+                  if(depth>0)
+                  return "great" + build_great(depth-1);
+                  else return "";
+                }
+            var user_name = "";
+            user_name= prompt("what is your name");
+            console.log("The Value entered was "+ user_name);
+            document.write("welcome to my page " + user_name + "!");
+      </script>
+    </body>
+  </html>

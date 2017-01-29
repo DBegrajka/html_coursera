@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title="THE AWESOME COLOR GUESSING GAME"></title>
+    <meta name= "author" content = "Deepak Begrajka" >
+      </head>
+
+      <body>
+          <script>
+            var continents = ["Australia", "Africa", "America", "Antartica"];
+            var response, count=0;
+            //Normal for Loops
+//            for(var i = 0; i<continents.length; i++)
+            /*  for(var i in continents)
+            {
+              response= confirm("Have you been to "+ continents[i]+ "?");
+              if(response)
+              count++;
+            }
+
+          alert("You have been to " + count +"Continents!");
+          */
+          // For in Loop
+/*          var oneperson = { initials: "DB", age: 23, job: "Research Assistant"};
+          for(var property in oneperson){
+            alert(property+"="+ oneperson[property]);
+          }
+          */
+          // For of loop
+/*          for (var continent of continents){
+            response= confirm("Have you been to "+ continent + "?");
+            if(response)
+            count++;
+          }
+          alert("You have been to " + count +"Continents!");
+  */        /* Infinite Loop
+          for( ; ;)
+          {
+          alert("Welcome");
+        }*/
+        /*two variable in Loop
+        for(var rabbits =2, genration =1; genration<=12; genration++, rabbits*=2){
+        alert("gen:" +genration+ "total:" + rabbits);
+      }*/
+      //Loop control
+/*      var total_amount = 0;
+      while (true) {
+        var this_amount = prompt("How much money in this account?");
+        this_amount=parseFloat(this_amount);
+        if(this_amount>0)
+        total_amount+=this_amount;
+        else {
+          break;
+        }
+      }
+      alert("total savings is:" + total_amount);
+*/
+      // continue Loop
+      var year, great_years=[];
+      for(year =2014; year<=2016; year++){
+        correct = confirm(year + " Was great year?")
+        if (!correct)continue;
+        great_years.push(year);
+      }
+      alert("your great years were: " + great_years);
+          </script>
+      </body>
+    </html>

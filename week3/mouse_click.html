@@ -1,0 +1,38 @@
+<html>
+  <body onload="the_timer=setInterval(set_timer,50)">
+    <h1>Alarm CLock</h1>
+      <script>
+      function goodchoice(){ alert("Good_Choice");}
+      function badchoice(){alert("Bad_Choice");}
+      function change_color(new_color) {
+        document.getElementById("my_div").style.background=new_color;
+      }
+      var wait_duration;
+      function set_things_up() {
+        wait_duration=prompt("How long do you want to wait");
+        setTimeout(show_wake_up_message,wait_duration);
+      function show_wake_up_message() {
+        alert("Wake_up!!!!!!!!!");
+      }
+      }
+      var the_timer, X_position =0, the_image;
+      function set_timer() {
+        the_image=document.getElementById("nina.jpg");
+        X_position=X_position+1;
+        the_image.style.left=X_position;
+//        the_timer=setTimeout(set_timer,50);
+      }
+
+      </script>
+      <div id="my_div"
+        style ="position:absolute; background:yellow; left:900; top:100; width:100;
+                font-size:52pt"
+          onmouseover="change_color('red');"
+          onmouseout="change_color('yellow');">
+          MOve obere this to see the color change....
+      </div>
+      <!--<img src= "aastha.jpg" onclick="goodchoice()"> -->
+      <img src= "nina.jpg" id="nina.jpg" style="position:absolute; left:0;">
+      <button onclick="clearInterval(the_timer)">Stop!</button>
+  </body>
+</html>

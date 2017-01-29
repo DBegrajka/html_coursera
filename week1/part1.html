@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+      <title> My first form web page </title>
+      <meta name = "author" content = "Deepak Begrajka">
+
+    </head>
+
+    <body>
+
+      <form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get" enctype="multipart/form-data">
+      <h1>Please Enter Your Details For Our Dating Website! </h1>
+      <fieldset>
+        <legend>Your Face </legend>
+
+        <label for="fileToUpload">Your Image:</label>
+        <input type="file" id= "fileToUpload" name="fileToUpload" required>
+        <br><label for="preview">Image Preview:</label>
+        <img src="stella_photo.jpg" id="preview" width="300">
+
+      </fieldset> <br>
+
+      <fieldset>
+        <legend>Your General Details </legend>
+        <div>
+        <label for="firstname">Name:</label>
+        <input type="textbox" id="firstname" name="name" placeholder="Your Full Name" autofocus required><br>
+        <label for="gender">Gender:</label>
+
+        <input type="radio" style="width: auto" name="male" value="male"required>Male
+        <input type="radio" style="width: auto" name="male" value="female">Female<br>
+
+        <label for="Yourage">Your age:</label>
+        <input type="number" min="0" max="100" step="1" value="18" id="Yourage" name="age" required=""><br>
+        <label for="birthday">Date of Birth:</label>
+        <input type="date" id="birthday" name="birthday"><br>
+        <label for="color">Favorite color:</label>
+        <input type="color" id="color" name="color" ><br>
+        <label for="country">Which Country:</label>
+        <select name="country">
+          <option value="hk">Hong Kong</option>
+          <option value="fr">France</option>
+          <option value="US">USA</option>
+          <option value="ind">India</option>
+          <option value="uk">UK</option>
+          <option value="Pr">Portugal</option>
+        </select>
+
+  </fieldset> <br>
+  <fieldset>
+    <legend>Your Indicators </legend>
+    <div>
+      <label for="height">Height:</label>
+      Short</span><input type="range" min="0" max="100" step="5" value="50" id="height" name="height"> Tall<br>
+      <label for="rich">Salary:</label>
+      Poor</span><input type="range" min="0" max="100" step="5" value="50" id="rich" name="rich"> Rich<br>
+  </fieldset><br>
+  <fieldset>
+    <legend>Your Contact Informaion </legend>
+
+    <label for="email">Email:</label>
+    <input type="email"  name="email" required><br>
+    <label for="mobile">Mobile:</label>
+    <input type="tel" id="tel" name="tel" required><br>
+    <label for="address">Address:</label>
+    <textarea id="address" width: 360px; height: 50px required></textarea><br>
+    <label for="contact">Method to Contact You:</label>
+    <input type="checkbox" style="width: auto" name="items" value="email"> Email
+    <input type="checkbox" style="width: auto" name="items" value="whatsapp"> Whatsapp
+    <input type="checkbox" style="width: auto" name="items" value="facebbok"> Facebook
+
+  </fieldset><br>
+  <input type="submit" value="submit">
+
+    </body>
+
+</html>
